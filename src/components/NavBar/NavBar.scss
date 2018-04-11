@@ -1,0 +1,168 @@
+@import '../../static/styles/variables';
+
+.nav-bar {
+  background-color: $nav-background;
+  /*background-color: #4A4A6E;*/
+  color: $nav-text;
+  /*padding: 20px;*/
+  display: flex;
+}
+
+.nav-options {
+  display: flex;
+  flex: 1;
+  flex-direction: row-reverse;
+  height: 100%;
+}
+.nav-link {
+  padding: 20px;
+  font-size: 12px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $nav-text;
+  align-items: center;
+  display: flex;
+  border-right: 1px solid $nav-border;
+  box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.2);
+}
+.nav-link:hover {
+  cursor: pointer;
+  background-color: $nav-bkg-hover;
+}
+.nav__menu-item:last-child {
+  border-left: 1px solid $nav-border;
+}
+
+/*a.active-nav {
+  background-color: #ddd;
+}*/
+
+.logo {
+  float: left;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  padding: 5px 0px;
+}
+
+/*
+  possible color for navbar:  #134d7b; 
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+  Slide animation styles
+
+  You may need to add vendor prefixes for transform depending on your desired browser support.
+*/
+
+
+.slide-enter {
+  transform: translateY(-100%);
+  transition: 0.3s cubic-bezier(0, 1, 0.5, 1);
+}
+.slide-enter.slide-enter-active {
+  transform: translateY(0%);
+}
+
+.slide-leave {
+  transform: translateY(0%);
+  transition: .3s ease-in-out;
+}
+.slide-leave.slide-leave-active {
+  transform: translateY(-100%);
+}
+
+
+
+
+
+.menu-container {
+  text-align: center;
+}
+
+nav {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+  
+.nav__menu-item {
+  display: inline-block;
+  position: relative;
+
+  &:hover {
+    .nav__submenu {
+      display: block;
+    }
+  }
+}
+    
+.nav__submenu {
+  font-weight: 300;
+  text-transform: none;
+  position: absolute;
+  min-width: 180px;
+  font-size: 12px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $nav-text;
+  padding: 0px;
+  box-sizing: border-box;
+  margin: 0px 0px 0px -1px;
+  -webkit-box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.2);
+  border-left: 1px solid $nav-border;
+}
+.nav__submenu-item-anchor {
+  list-style: none;
+  text-decoration: none;
+}
+
+.nav__submenu-item {
+  background-color: $nav-border;
+  color: $nav-text;
+  list-style: none;
+  padding: 20px;
+}
+
+.nav__submenu-item:hover {
+  cursor: pointer;
+  color: $white;
+  background-color: $nav-text;
+}
+
+/*
+  CSS for the submenu container, needed to adjust the behaviour to our needs.
+  Try commenting out this part to see how the animation looks without the container involved.
+*/
+.submenu-container {
+  min-width: 180px;
+  min-height: 300px;
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+  margin-left: -1px;
+}
+

@@ -1,0 +1,20 @@
+{
+ "apiRoot": "http://myApiRoot.com",
+ "navs": [{
+      "text": "About",
+      "children": [{
+        "text": "Minutes",
+        "href": "minutes"
+      }, {
+        "text": "ByLaws",
+        "href": "bylaws"
+      }],
+      "href": "about"
+    }, {
+      "text": "Slack",
+      "href": "slack"
+    }, {
+      "text": "Calendar",
+      "href": "calendar"
+    }]
+}
